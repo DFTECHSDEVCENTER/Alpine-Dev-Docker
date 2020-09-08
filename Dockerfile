@@ -1,7 +1,10 @@
 FROM alpine:latest
 
-RUN apk upgrade --no-cache -U && \
-  apk add --no-cache curl make gcc g++ python linux-headers binutils-gold gnupg libstdc++ python3 bash wget
+RUN apk update
+RUN apk upgrade
+
+RUN apk upgrade --no-cache -U
+RUN apk add --no-cache curl make gcc g++ python linux-headers binutils-gold gnupg libstdc++ python3 bash wget
 
 RUN wget https://bootstrap.pypa.io/get-pip.py && python get-pip.py && rm -rf get-pip.py
 
