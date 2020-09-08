@@ -4,9 +4,11 @@ RUN apk update
 RUN apk upgrade
 
 RUN apk upgrade --no-cache -U
-RUN apk add --no-cache curl make gcc g++ python linux-headers binutils-gold gnupg libstdc++ python3 bash wget
+RUN apk add --no-cache curl make gcc g++ linux-headers binutils-gold gnupg libstdc++ wget
 
-RUN wget https://bootstrap.pypa.io/get-pip.py && python get-pip.py && rm -rf get-pip.py
+RUN apk add --update --no-cache build-base python3-dev python3 libffi-dev libressl-dev bash git gettext curl \
+ && curl -O https://bootstrap.pypa.io/get-pip.py \
+ && python3 get-pip.py 
 
 ENV ALPINE_MIRROR "http://dl-cdn.alpinelinux.org/alpine"
 
