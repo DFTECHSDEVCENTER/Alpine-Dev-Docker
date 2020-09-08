@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM alpine:edge
 
 RUN apk upgrade --no-cache -U && \
   apk add --no-cache curl make gcc g++ python linux-headers binutils-gold gnupg libstdc++ python3 bash wget
