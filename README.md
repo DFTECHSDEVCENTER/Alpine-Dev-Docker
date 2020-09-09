@@ -16,6 +16,7 @@ This release comes pre-installed with Nodejs 12 LTS and Python 3 along with ash 
 
 ## Build Status Badges
 
+!![Alpine Master Build Status](https://github.com/DFTECHSDEVCENTER/Alpine-Dev-Docker/workflows/Alpine%20Master%20Build%20Status/badge.svg)
 ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/dftechs/alpine-dev/latest?style=for-the-badge)
 ![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/dftechs/alpine-dev?logo=docker&style=for-the-badge)
 ![MicroBadger Layers](https://img.shields.io/microbadger/layers/dftechs/alpine-dev?logo=docker&style=for-the-badge)
