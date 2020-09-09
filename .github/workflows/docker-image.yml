@@ -1,0 +1,18 @@
+name: Alpine Edge Build Status
+
+on:
+  push:
+    branches: [ edge ]
+  pull_request:
+    branches: [ edge ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag dftechs_alpine_edge:$(date +%s)
